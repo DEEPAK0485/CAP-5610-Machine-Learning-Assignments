@@ -1,0 +1,22 @@
+import numpy as np
+import random as rd
+
+# Generate or provide two vectors (replace these with your own data)
+vector1 = np.array([1, 2, 3, 4, 5])
+vector2 = np.array([6, 7, 8, 9, 10])
+
+# Correlation coefficient calculation
+correlation = np.corrcoef(vector1, vector2)[0, 1]
+
+# Cosine similarity calculation
+dot_product = np.dot(vector1, vector2)
+mag1 = np.linalg.norm(vector1)
+mag2 = np.linalg.norm(vector2)
+cosine_similarity = dot_product / (mag1 * mag2)
+
+# Euclidean distance calculation
+euclidean_distance = np.linalg.norm(vector1 - vector2)
+
+print("Correlation:",correlation)
+print("Cosine Similarity:",cosine_similarity)
+print("Euclidean Distance:",euclidean_distance)
